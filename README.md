@@ -39,7 +39,7 @@
 
 ## 📂 폴더 구조
 ```
-project/
+legacy/
 ├── index.html
 ├── css/
 │ ├── reset.css
