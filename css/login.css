@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+
+@font-face { 
+  font-family: 'jalnan2';
+  src: url(../fonts/Jalnan2TTF.ttf) format('truetype');
+}
+/* reset */
+a {text-decoration: none; color: inherit;}
+
+
+/* wrap */
+#wrap { max-width: 498px;  margin: 0 auto;  width: 100%; } 
+
+
+/* top */
+#top {border-bottom: 1px solid #ccc; padding: 20px 20px 10px 20px;  height: auto;
+  min-height: 60px; /* 최소 높이 */
+  max-height: 200px; /* 최대 높이 */ }
+#top h2 { text-align: center;}
+
+.flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.left_icon,.right_icon  {display: flex; gap: 15px;}
+
+
+
+/* login_sectin */
+#login_section { 
+  max-width: 497px;
+  margin: 0 auto;
+  padding: 0 14%;
+}
+
+.event_join {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 30px;
+  position: relative;
+}
+.event_join img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  position: absolute;
+  top: -14px;
+}
+.img_box {
+  width: 70px;
+  height: auto;
+  overflow: hidden;
+}
+.new_join {
+  font-size: 12px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.new_join span {
+  color: #000;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+
+#userId {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-indent: 1em;
+}
+
+#password {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-indent: 1em;
+}
+
+.login_links {
+  display: flex; 
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.find { font-size: 12px; font-weight: bold; margin-top: 10px;}
+.signup {font-size: 12px; font-weight: bold; margin-top: 10px;}
+
+
+#Login_button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right,
+    #9AC626 0%,
+    #AED72F 25%,
+    #C5E03E 50%,
+    #D9EB7C 75%,
+    #EEF6C4 100%
+  );
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider::before {
+  margin-right: 10px;
+}
+
+.divider::after {
+  margin-left: 10px;
+}
+
+.divider span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #888;
+}
+
+.naver,
+.kakao,
+.facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* ← 이미지와 텍스트 사이 간격 */
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.naver {
+  background-color: #00C73C;
+  color: #fff;
+}
+
+.kakao {
+  background-color: #FAE100;
+  color: #000;
+}
+
+.facebook {
+  background-color: #1877F2;
+  color: #fff;
+}
+
+.naver img,
+.kakao img,
+.facebook img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.naver { margin-bottom: 10px;}
+.kakao {margin-bottom: 10px;}
+.facebook {margin-bottom: 30px;}
+
+
+
+/* 햄버거메뉴 */
+#hamburger {
+  width: 90%;
+  height: 100vh;       /* 100% 대신 뷰포트 높이로 변경 */
+  position: fixed;
+  top: 0;              /* top 위치 명확히 지정 */
+  right: -100%;
+  background: #fff;    /* 메뉴 배경색 유지 */
+  transition: right 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;    /* 세로 스크롤 가능하도록 추가 */
+  -webkit-overflow-scrolling: touch;  /* 아이폰에서 부드러운 스크롤 */
+}
+#hamburger.open {
+  right: 0;
+  transition: right 0.3s ease;
+}
+.hamburger_inner_up { 
+  width: 100%;
+  border-bottom: 1px solid #ccc; 
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.hamburger_inner_up h2 {
+  padding-left: 15px; padding-top: 15px;
+}
+.Login { color: #AED72F; font-weight: bold; margin-right: 15px; font-size: 18px;}
+.Login img { margin-right: 10px;}
+
+.hamburger_inner_down {
+  padding-left: 20px; padding-right: 15px;
+}
+.menu_join { 
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+.bear_join { color: #888; font-size: 12px;}
+.bear_join span { color: #000; font-weight: bold;display: block; margin-top: 5px; margin-bottom: 10px;}
+
+
+#hamburger_gnb ul {  display: block;}
+#hamburger_gnb ul li { font-size: 26px; color: #AED72F; line-height: 3em; font-family: 'jalnan2', sans-serif;}
+#hamburger_gnb ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#hamburger_gnb .submenu { display: none; overflow: hidden;}
+#hamburger_gnb .submenu li {font-weight: normal; text-indent: 1em; line-height: 1.5em; padding-left: 15px;  font-size: 18px; color: #222;}
+#hamburger_gnb .submenu.active {
+  display: block;
+}
+#hamburger_gnb .submenu li:last-child {margin-bottom: 10px;}
+#hamburger_gnb .submenu li:hover { text-decoration: underline;}
+
+.menu_quick_icon { display: flex; justify-content: space-around; margin-top: 30px; padding-bottom: 30px;}
+
+.menu_close { border: none; background: none; font-size: 26px; color: #AED72F; position: absolute; right: 10px; top: 10px;
+cursor: pointer;
+}
+
+
+@media (max-width: 480px) {
+  #hamburger_gnb ul li {
+    font-size: 20px;
+  }
+}
+
+#hamburger_gnb > ul > li > a {
+  cursor: pointer;
+}
+
+#hamburger_gnb > ul > li > a .fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+#hamburger_gnb > ul > li > a.active .fa-chevron-down {
+  transform: rotate(180deg); /* 열릴 때 화살표 뒤집기 */
+}
+
+
+.sns_icon {
+  border: 1px solid #ccc;
+  width: 87px;
+  height: 77px;
+  border-radius: 10px;
+
+}
+.sns_icon a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.sns_icon img {
+  width: 45px;
+  height: 45px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sns_icon span {
+  font-weight: bold; 
+  font-size: 12px;
+}
+
+.sns_icon img.ser_info { 
+  width: 68px;
+  height:45px;
+}
+
+.sns_icon img.youtube {
+  width: 45px;
+  height: 32px;
+  margin-top: 13px;
+}
+
+.sns_icon a .map_txt {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3px;
+}
+.sns_icon {
+  border: 1px solid #ccc;
+  width: 87px;
+  height: 77px;
+  border-radius: 10px;
+
+}
+.sns_icon a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.sns_icon img {
+  width: 45px;
+  height: 45px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sns_icon span {
+  font-weight: bold; 
+  font-size: 12px;
+}
+
+.sns_icon img.ser_info { 
+  width: 68px;
+  height:45px;
+}
+
+.sns_icon img.youtube {
+  width: 45px;
+  height: 32px;
+  margin-top: 13px;
+}
+
+.sns_icon a .map_txt {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+/* bottom */
+#bottom {
+  width: 100%;
+  height: 232px;
+  background-color: #ccc;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#footer_top { width: 100%; margin-bottom: 50px; display: flex;  justify-content: space-between;padding: 5px 0; box-sizing: border-box; ; } 
+#footer_top img {width: 150px; height: 33px;}
+#footer_top label { display: none;}
+#footer_top option { color: #000; background: #fff;}
+.footer_select {display: flex; align-items: center;  }
+#quickMenu { border: none; background: #ccc; color: #8059EA; font-size: 16px; font-weight: bold; appearance: none; background: url(../image/arrow_top.png)no-repeat right center; cursor: pointer; outline: #8059EA;  padding: 7px; }
+
+address, .copyright { font-style: normal; font-size: 14px; font-weight: bold; line-height: 1.5em; margin-bottom: 5px; }
+
+#info { color: #888; font-size: 14px; line-height: 1.5em;}
+
